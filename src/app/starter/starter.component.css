@@ -1,0 +1,14 @@
+.btn{
+  margin: 5px;
+  width: 200px;
+}
+.content{
+  width:200px;
+  align-items: center;
+  margin: auto;
+}
+.main{
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}

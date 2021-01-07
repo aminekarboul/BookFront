@@ -1,0 +1,29 @@
+
+<ng-sidebar-container>
+  <ng-sidebar [opened]="opened">
+
+      <button (click)="toggleSidebar()" class="btn btn-primary" style="float: right;">☰</button>
+
+    <ul class="menu">
+      <li><button class="btn1 btn btn-primary" (click)="goTopage('0')">formulaire de Ajout de livre</button></li>
+      <li><button class="btn1 btn btn-primary" (click)="goTopage('1')">Formulaire de modification</button></li>
+      <li><button class="btn1 btn btn-primary" (click)="goTopage('2')">A propos ce livre</button></li>
+      <li><button class="btn1 btn btn-primary" (click)="goTopage('3')">Liste des livres</button></li>
+    </ul>
+  </ng-sidebar>
+  <div ng-sidebar-content>
+    <div class="header">
+      <button (click)="toggleSidebar()" class="btn btn-primary">☰</button>
+      <button  class="btn btn-primary" style="float: right;">Logout</button>
+    </div>
+    <div class="inside">
+        <div *ngIf="num=='0'"><app-formulaire-c></app-formulaire-c></div>
+        <div *ngIf="num=='1'"><app-formulaire-m></app-formulaire-m></div>
+        <div *ngIf="num=='2'"><app-book></app-book></div>
+        <div *ngIf="num=='3'"><app-booklist></app-booklist></div>
+
+    </div>
+  </div>
+</ng-sidebar-container>
+
+

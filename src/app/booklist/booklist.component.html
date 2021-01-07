@@ -1,0 +1,12 @@
+
+<ul class="list-group">
+  <li class="list-group-item" *ngFor="let book of books">
+    <h3>{{ book.title }}</h3>
+    <p>{{ book.autor }}</p>
+    <p>the discription of this book:{{ book.discription }}</p>
+    <p *ngIf="book.genre && book.genre.length > 0">
+      the genres of this book !
+      <span *ngFor="let gr of book.genre">{{ gr }} - </span>
+    </p>
+  </li>
+</ul>
